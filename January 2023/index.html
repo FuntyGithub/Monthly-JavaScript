@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>January 2023</title>
+    <meta name="description" content="Monthly JavaScript challange: January 2023">
+    <meta name="author" content="Funty">
+    <meta property="og:image" content="./_preview.gif">
+</head>
+<body>
+
+    <div id="menu">
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+        <div class="hamburger"></div>
+    </div>
+
+</body>
+<style>
+    body {
+        background-color: #000;
+    }
+    #menu {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+    }
+    .hamburger {
+        width: 50px;
+        height: 5px;
+        background-color: #fff;
+        margin: 5px;
+        border-radius: 5px;
+        transition: 0.5s;
+    }
+    #menu:hover:not(.change) .hamburger {
+        background-color: #f40082;
+    }
+    #menu.change .hamburger{
+        transition: 0.5s;
+        background-color: #ffd200;
+    }
+    #menu.change .hamburger:nth-child(1) {
+        transform: rotate(-405deg) translate(-3px);
+        width: 25px;
+    }
+    #menu.change .hamburger:nth-child(2) { /* hab es jetzt so wie im gif gemacht, finde es aber eigentlich schöner, den mittleren nicht zu bewegen */
+        transform: rotate(-360deg);
+    }
+    #menu.change .hamburger:nth-child(3) {
+        transform: rotate(405deg) translate(-3px );
+        width: 25px;
+    }
+</style>
+<script>
+    let menu = document.getElementById("menu");
+    menu.addEventListener("click", function() {
+        menu.classList.toggle("change");
+    });
+</script>
+</html>
