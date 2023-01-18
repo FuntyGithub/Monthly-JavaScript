@@ -1,5 +1,5 @@
 # January 2023
-![preview gif](https://raw.githubusercontent.com/FuntyGithub/Monthly-JavaScript/main/January-2023/_preview.gif)  
+![preview gif](_preview.gif)  
 ## Task  
 ### Users should be able to:
     - By default the arrow is white: #fff
